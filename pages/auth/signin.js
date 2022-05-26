@@ -2,7 +2,7 @@ import { getProviders, signIn, useSession } from 'next-auth/react';
 import Router from 'next/router';
 import React from 'react'
 
-function signin({ providers }) {
+function Signin({ providers }) {
   const { data: session} = useSession();
   if(session) Router.push('/Home');
   return (
@@ -25,4 +25,4 @@ export async function getServerSideProps(){
     }
 }
 
-export default signin
+export default Signin
